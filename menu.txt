@@ -1,3 +1,91 @@
-Gulab Jamun
-Chocolate Brownie
-Ice Cream
+# Git Branching and Merging
+
+## 1. Branching
+
+Created a new branch called `add-desserts` from `main` using:
+
+bash
+git checkout -b add-desserts
+
+
+Added three desserts to `menu.txt`:
+
+- Gulab Jamun
+- Chocolate Brownie
+- Ice Cream
+
+Committed the changes using:
+
+bash
+git add menu.txt
+git commit -m "Add three desserts to menu"
+
+
+## 2. Merging
+
+Switched to the main branch and merged the dessert branch:
+
+bash
+git switch main
+git merge add-desserts
+
+
+The dessert changes are now included in the main branch.
+
+## 3. Git Commit History
+
+Command used:
+
+git log --oneline --graph
+
+* f697772 (HEAD -> main, add-desserts) Add three desserts to menu
+* 2e548b5 (origin/main, origin/HEAD) Initial commit
+
+
+## 4. Understanding Merge Conflicts
+
+A merge conflict can occur when two branches modify the same line of a file differently.
+
+For example:
+
+- On the `main` branch, someone changes a menu item to `Vanilla Ice Cream`.
+- On the `add-desserts` branch, someone changes the same line to `Chocolate Ice Cream`.
+- When we merge the branches, Git cannot automatically decide which version should be kept.
+
+Git reports a merge conflict and asks us to resolve it manually.
+
+## 5. How to Resolve a Merge Conflict
+
+1. Open the conflicting file in VS Code.
+2. Find the conflict markers:
+
+text
+<<<<<<< HEAD
+Vanilla Ice Cream
+=======
+Chocolate Ice Cream
+>>>>>>> add-desserts
+
+
+3. Decide which version to keep, or combine both versions.
+4. Remove all conflict markers.
+5. Save the file.
+6. Stage the resolved file:
+
+git add menu.txt
+
+
+7. Complete the merge:
+
+git commit -m "Resolve merge conflict in menu"
+
+
+8. Verify the merge:
+
+git status
+git log --oneline --graph
+
+
+## Conclusion
+
+Git branches allow developers to work independently without affecting the main branch. Merging combines changes from different branches, while merge conflict resolution ensures that conflicting changes are handled correctly.
