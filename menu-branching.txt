@@ -1,0 +1,59 @@
+* eb4c292 (HEAD -> branching-merging-week1-3049, origin/main, origin/HEAD, main) Add Git branching and merge documentation
+* f019025 Add Git branching and merge documentation
+* f697772 (add-desserts) Add three desserts to menu
+* 2e548b5 Initial commit
+
+
+## Resolving Merge Conflicts
+
+### How a Merge Conflict Occurs
+
+A merge conflict happens when Git cannot automatically combine changes from two different branches. If you are working on a feature branch (e.g., `update-menu`) and someone else pushes changes to `main` that modify the **exact same line** of the same file (or if one branch deletes a line the other modified), Git pauses the merge. 
+
+Because Git does not know which version of the line is correct, it marks the file as conflicted and asks you to manually choose the final code.
+
+### How to Resolve It
+
+Follow these steps to resolve the conflict when merging `main` into your branch:
+
+#### 1. Identify the Conflicted File
+When you run `git merge main` (or `git pull origin main`), Git will output a message like this:
+```text
+Auto-merging menu.html
+CONFLICT (content): Merge conflict in menu.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+You can also run `git status` to see a list of all files under the **Unmerged paths** section.
+
+#### 2. Open the File and Inspect the Conflict Markers
+Open the conflicted file in your code editor. Git inserts special markers (`<<<<<<<`, `=======`, and `>>>>>>>`) to show you the exact lines in conflict:
+
+```html
+<<<<<<< HEAD
+  <li>Special: Grilled Salmon - \$18</li>
+=======
+  <li>Special: Roasted Chicken - \$16</li>
+>>>>>>> main
+```
+
+* **`<<<<<<< HEAD` to `=======`**: These are the changes from your current branch.
+* **`=======` to `>>>>>>> main`**: These are the incoming changes from the `main` branch.
+
+#### 3. Edit the Code to Resolve the Conflict
+Decide which version to keep, or combine them into a new version. **Delete all three conflict marker lines** (`<<<<<<<`, `=======`, `>>>>>>>`) so only valid code remains.
+
+*Example (keeping both items):*
+```html
+  <li>Special: Grilled Salmon - \$18</li>
+  <li>Special: Roasted Chicken - \$16</li>
+```
+
+#### 4. Stage and Commit the Resolution
+Once you have saved the file, tell Git the conflict is resolved by staging and committing the changes:
+
+```bash
+git add menu.html
+git commit -m "Resolve merge conflict in menu specials"
+```
+
+*(Note: If you ever get stuck and want to cancel the merge completely, run `git merge --abort` to return your branch to its state before the merge started.)*
