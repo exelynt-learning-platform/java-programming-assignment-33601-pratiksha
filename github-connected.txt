@@ -1,6 +1,7 @@
 # GitHub Repository Connection
 
 ## Repository Details
+I used my existing GitHub account.
 
 - GitHub Username: pratikshafate
 - Repository Name: recipe-collection
@@ -8,6 +9,10 @@
 
 Repository URL:
 https://github.com/pratikshafate/recipe-collection
+
+Local Repository Connection
+
+Connected my local Git repository to the correct GitHub repository using:
 
 ## Remote Configuration
 
