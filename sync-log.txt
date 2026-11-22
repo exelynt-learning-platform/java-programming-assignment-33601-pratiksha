@@ -1,0 +1,138 @@
+# GitHub Synchronization Log
+
+## 1. Repository Details
+
+Repository Name: weather-notes
+
+GitHub URL: https://github.com/pratikshafate/weather-notes
+
+## 2. Initial Push
+
+Command:
+
+git push -u origin main
+
+Output:
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 40.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/pratikshafate/weather-notes.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+## 3. Clone Repository
+
+Command:
+
+git clone https://github.com/pratikshafate/weather-notes.git weather-notes-clone
+
+Output:
+Cloning into 'weather-notes-clone'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+## 4. Commit and Push from Clone
+
+Commands:
+
+git add weather-notes.md
+
+git commit -m "Update weather notes from clone
+
+git push origin main
+
+Output:
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 413 bytes | 45.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/pratikshafate/weather-notes.git
+   47267f7..84dc434  main -> main
+
+## 5. Pull Changes into Original Repository
+
+Command:
+
+git pull origin main
+
+Output:
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 393 bytes | 5.00 KiB/s, done.
+From https://github.com/pratikshafate/weather-notes
+ * branch            main       -> FETCH_HEAD
+   47267f7..84dc434  main       -> origin/main
+Updating 47267f7..84dc434
+Fast-forward
+ weather-notes.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 weather-notes.md
+
+## 6. Git History
+
+Command:
+
+git log --oneline --graph
+
+Output:
+* 84dc434 (HEAD -> main, origin/main) Update weather notes from clone
+* 47267f7 Initial weather notes commit
+
+## 7. Understanding Origin and Main
+
+### Origin
+
+Origin is the default name for a remote Git repository. It usually points to the repository hosted on GitHub.
+
+### Main
+
+Main is the primary branch of a Git repository. It generally contains the stable project code.
+
+### Origin/Main
+
+Origin/main represents the main branch on the remote GitHub repository.
+
+## 8. Real Team Git Workflow
+
+In a real development team, developers follow these steps:
+
+1. Pull: Get the latest changes from the remote repository.
+
+   `git pull origin main`
+
+2. Branch: Create a separate branch for a new feature.
+
+   `git checkout -b feature/weather-update`
+
+3. Commit: Save changes locally.
+
+   `git add .`
+
+   `git commit -m "Add weather update"`
+
+4. Push: Upload the feature branch to GitHub.
+
+   `git push -u origin feature/weather-update`
+
+5. Pull Request: Create a Pull Request on GitHub to request code review and merging into main.
+
+6. Review: Team members review the code and suggest improvements.
+
+7. Merge: After approval, merge the Pull Request into main.
+
+8. Pull Again: Update the local main branch.
+
+   `git switch main`
+
+   `git pull origin main`
+
+## Conclusion
+
+GitHub synchronization allows multiple developers to work on the same project. Git pull, branch, commit, push, and Pull Requests help maintain an organized development workflow.
