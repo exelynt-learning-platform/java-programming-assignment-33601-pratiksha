@@ -1,12 +1,16 @@
 # GitHub Repository Connection
 
-## 1. GitHub Repository
 
-Created a new public GitHub repository named `recipe-collection`.
+I used my existing GitHub account to create a new public repository named recipe-collection.
 
-Repository URL:
+GitHub Username: pratikshafate
 
-https://github.com/pratikshafate/recipe-collection
+Repository Name: recipe-collection
+
+Repository URL: https://github.com/pratikshafate/recipe-collection
+
+The repository was created successfully on GitHub and is used to store and manage my local recipe collection project.
+
 
 ## 2. Connecting Local Repository to GitHub
 
@@ -25,8 +29,8 @@ git remote -v
 
 Output:
 
-origin  https://github.com/exelynt-learning-platform/java-programming-assignment-33601-pratiksha.git (fetch)
-origin  https://github.com/exelynt-learning-platform/java-programming-assignment-33601-pratiksha.git (push)
+origin  https://github.com/pratikshafate/recipe-collection.git (fetch)
+origin  https://github.com/pratikshafate/recipe-collection.git (push)
 
 ## 4. Difference Between Local and Remote Repository
 
