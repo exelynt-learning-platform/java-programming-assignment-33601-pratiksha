@@ -1,5 +1,9 @@
-Version control mainly used for tracking changes to the files.
+Version control mainly used for tracking changes to the files.When four developers are building a Java project—such as a fest registration portal, event scheduler, or scoring system—sharing code via WhatsApp, Google Drive, or USB drives quickly leads to chaos. Here is why version control is essential for your team:
+Simultaneous Work Without Overwriting Code, Clear Accountability and Progress Tracking, Smooth code integration.
+
 
 Tracking code changes, overwritting each others code, history of code changes.
 
 Git is the local version control tool on your laptop that tracks your edits, while GitHub is the online cloud platform where the whole fest team shares and combines their work.
+
+The main difference between centralized and distributed version control is where the full project history is stored: centralized version control keeps the complete repository and history on a single central server, while distributed version control gives every developer a full local copy of the entire repository and its history
