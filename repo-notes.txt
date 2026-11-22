@@ -1,0 +1,138 @@
+objects/ - Stores all file data (blobs), directory structures (trees), and commit snapshots compressed by hash.
+
+
+refs/ - Holds pointers to commit hashes, organized into local branches (heads), tags, and remotes.
+
+
+HEAD	A single file pointing to your currently active branch or commit.
+
+
+config	Stores repository-specific settings, such as remote URLs and local user preferences.
+
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ChangeTracker.lnk
+        Cmp Interview List.xlsx
+        Docker Desktop.lnk
+        Excel.lnk
+        Firefox.lnk
+        FreeCommander XE.lnk
+        Microsoft Edge.lnk
+        MongoDB Compass.lnk
+        NODE2026/
+        Node-mysql-example/
+        OneNote.lnk
+        Outlook.lnk
+        PDFCreator.lnk
+        PROJECT-01/
+        Postman.lnk
+        PowerPoint.lnk
+        Pratiksha - Chrome.lnk
+        Pratiksha Interview Checklist.xlsx
+        Pratiksha Mobile Backup/
+        Publisher.lnk
+        SERVER/
+        Swapnil Phone/
+        Word.lnk
+        Wordfast.lnk
+        budget-tracker/
+        crm-mini-project/
+        desktop.ini
+        expenses.txt
+        interview material.txt
+        java/
+        jwt-athentication/
+        node course/
+        node-sequelize-mysql-api/
+        nodecronexample/
+        nodejoiexample/
+        nodejsbullmqexample/
+        nodejscrmproject/
+        nodejsmongodbexam/
+        nodejsmulterexample/
+        nodejsrediscache/
+        nodeuserauthentication/
+        react-essentials/
+        repo-notes.txt
+        userloginminiproject/
+        ~$Pratiksha Interview Checklist.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+C:\Users\sfate\Desktop>git status
+On branch git-repository-basics-week1-3049
+Your branch is up to date with 'origin/git-repository-basics-week1-3049'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   expenses.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ChangeTracker.lnk
+        Cmp Interview List.xlsx
+        Docker Desktop.lnk
+        Excel.lnk
+        Firefox.lnk
+        FreeCommander XE.lnk
+        Microsoft Edge.lnk
+        MongoDB Compass.lnk
+        NODE2026/
+        Node-mysql-example/
+        OneNote.lnk
+        Outlook.lnk
+        PDFCreator.lnk
+        PROJECT-01/
+        Postman.lnk
+        PowerPoint.lnk
+        Pratiksha - Chrome.lnk
+        Pratiksha Interview Checklist.xlsx
+        Pratiksha Mobile Backup/
+        Publisher.lnk
+        SERVER/
+        Swapnil Phone/
+        Word.lnk
+        Wordfast.lnk
+        budget-tracker/
+        crm-mini-project/
+        desktop.ini
+        interview material.txt
+        java/
+        jwt-athentication/
+        node course/
+        node-sequelize-mysql-api/
+        nodecronexample/
+        nodejoiexample/
+        nodejsbullmqexample/
+        nodejscrmproject/
+        nodejsmongodbexam/
+        nodejsmulterexample/
+        nodejsrediscache/
+        nodeuserauthentication/
+        react-essentials/
+        repo-notes.txt
+        userloginminiproject/
+        ~$Pratiksha Interview Checklist.xlsx
+
+
+
+Git manages files across three main states as you modify and save changes: the working directory, the staging area, and the repository.
+Using a file named expenses.txt, here is how a change moves through each state:
+
+1. Working Directory (Modified)
+
+• What it is: The local folder on your computer where you actively view and edit files.
+• Example: You open expenses.txt and add a new line: "Coffee: $5". Git notices the file has changed compared to your last saved version, so it marks expenses.txt as modified.
+
+2. Staging Area (Staged)
+
+• What it is: A preparation zone (also called the index) where you gather the exact changes you want to include in your next permanent snapshot.
+• Example: You run git add expenses.txt. Your "Coffee: $5" update is now staged. If you also edited another file (notes.txt) but didn't stage it, Git will ignore notes.txt during the next save.
+
+3. Repository (Committed)
+
+• What it is: The hidden .git folder where Git permanently stores snapshots of your project history.
+• Example: You run git commit -m "Add coffee expense". Git takes everything currently in the staging area and saves a permanent snapshot in the repository, marking expenses.txt as committed
+
