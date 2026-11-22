@@ -1,0 +1,5 @@
+Version control mainly used for tracking changes to the files.
+
+Tracking code changes, overwritting each others code, history of code changes.
+
+Git is the local version control tool on your laptop that tracks your edits, while GitHub is the online cloud platform where the whole fest team shares and combines their work.
