@@ -1,0 +1,24 @@
+1bb420c (HEAD -> tracking-changes-with-git-week1-3049, origin/tracking-changes-with-git-week1-3049) ratings file commited
+6332012 watchlist file commited
+2e548b5 (origin/main, origin/HEAD) Initial commit
+
+
+writing vague commit messages while bundling unrelated changes, and forgetting to stage files (or accidentally staging everything) before committing.
+
+
+1. Committing Everything with Vague Messages
+
+How to avoid it
+
+• The mistake. Beginners often treat commits like a "save" button—dumping hours of unrelated work into a single commit and labeling it "update", "fix", or "changes". When bugs appear later, this makes it nearly impossible to track down which change broke the code or to roll back one feature without undoing everything else.
+• How to avoid it.
+	• Make small, atomic commits. Group only closely related changes into a single commit (for example, one commit for fixing a login bug, and a separate commit for updating the header style).
+	• Follow a clear message format. Write a short, descriptive summary explaining what changed and why (e.g., "Fix null pointer error on empty login form" instead of "fix bug"). Using prefixes like feat:, fix:, or docs: also helps keep history readable.
+
+
+2. Forgetting git add (or Blindly Running git add .)
+How to avoid it.• Check status before committing. Make git status a habit before every commit. Files in red are unstaged; files in green are staged and ready to be committed.
+• Stage files intentionally. Add specific files by name (git add index.html app.js) or review changes piece-by-piece using git add -p. Keep a .gitignore file in your project root to automatically block build folders, logs, and environment secrets.
+• Quick fix if you mess up. If you accidentally stage an unwanted file, unstage it safely without losing your local edits using git restore --staged <filename>. If you forgot to include a file in your last commit, stage it and run git commit --amend --no-edit to fold it in.
+
+
