@@ -1,0 +1,59 @@
+# GitHub Repository Connection
+
+## 1. GitHub Repository
+
+Created a new public GitHub repository named `recipe-collection`.
+
+Repository URL:
+
+https://github.com/pratikshafate/recipe-collection
+
+## 2. Connecting Local Repository to GitHub
+
+Connected my local Git repository to GitHub using:
+
+git remote add origin https://github.com/pratikshafate/recipe-collection.git
+
+
+## 3. Remote Verification
+
+Used the following command to verify the remote connection:
+
+
+git remote -v
+
+
+Output:
+
+origin  https://github.com/exelynt-learning-platform/java-programming-assignment-33601-pratiksha.git (fetch)
+origin  https://github.com/exelynt-learning-platform/java-programming-assignment-33601-pratiksha.git (push)
+
+## 4. Difference Between Local and Remote Repository
+
+### Local Repository
+
+A local repository is stored on my computer. It contains project files, branches, and commit history.
+
+I can work on files, create branches, make changes, and commit changes locally without an internet connection.
+
+### Remote Repository
+
+A remote repository is hosted on a platform like GitHub. It stores the project files and commit history online.
+
+It allows developers to share code, collaborate with others, and access the repository from different computers.
+
+### Main Differences
+
+| Local Repository | Remote Repository |
+|---|---|
+| Stored on my computer | Hosted on GitHub |
+| Used for local development | Used for sharing and collaboration |
+| Changes are committed locally | Changes are shared using push |
+| Uses `git commit` | Uses `git push` to upload commits |
+| Uses `git pull` to retrieve remote changes | Stores shared project history |
+
+## Conclusion
+
+A local repository is used to develop and manage code on my computer, while a remote repository is used to store and share the project online.
+
+Git connects both repositories using the remote URL and commands like `git push`, `git pull`, and `git fetch`.
