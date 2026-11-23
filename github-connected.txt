@@ -1,0 +1,46 @@
+# GitHub Repository Connection
+
+## Repository Details
+I used my existing GitHub account.
+
+- GitHub Username: pratikshafate
+- Repository Name: recipe-collection
+- Visibility: Public
+
+Repository URL:
+https://github.com/pratikshafate/recipe-collection
+
+Local Repository Connection
+
+Connected my local Git repository to the correct GitHub repository using:
+
+## Remote Configuration
+
+Command used:
+
+git remote set-url origin https://github.com/pratikshafate/recipe-collection.git
+
+## Git Remote Verification
+
+Command:
+
+git remote -v
+
+Actual Output:
+
+origin  https://github.com/pratikshafate/recipe-collection.git (fetch)
+origin  https://github.com/pratikshafate/recipe-collection.git (push)
+
+## Local Repository vs Remote Repository
+
+Local Repository:
+A local repository is stored on my computer. It contains project files, branches, and commit history.
+
+Remote Repository:
+A remote repository is hosted on GitHub. It allows developers to share code, collaborate, and access the project online.
+
+Git commands:
+- git commit: Saves changes locally.
+- git push: Uploads local commits to GitHub.
+- git pull: Retrieves and integrates remote changes.
+- git fetch: Downloads remote updates without merging them.
