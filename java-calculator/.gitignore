@@ -1,14 +1,5 @@
-
-# Compiled Java files
 *.class
-
-# Build output directories
 target/
 out/
-
-# IDE configuration files
 .idea/
 .vscode/
-
-# Log files
-*.log
