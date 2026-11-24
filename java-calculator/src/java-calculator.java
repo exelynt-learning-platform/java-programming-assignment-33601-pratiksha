@@ -9,7 +9,7 @@ public static void main(String[] args){
   System.out.print("Enter first number: ");
   double num1 = scanner.nextDouble();
 
-  System.out.print("Enter operator (+, -, *, /): ");
+  System.out.print("Enter operator (+, -, *, /, %): ");
   char operator = scanner.next().charAt(0);
 
   System.out.print("Enter second number: ");
@@ -37,7 +37,16 @@ public static void main(String[] args){
         return;
       }
       result = num1 / num2;
-      break;  
+      break; 
+      
+    case '%':
+    if (num2 == 0) {
+        System.out.println("Error: Cannot calculate modulus by zero.");
+        scanner.close();
+        return;
+    }
+    result = num1 % num2;
+    break;  
   
     default:
       System.out.println("Invalid operator!");
