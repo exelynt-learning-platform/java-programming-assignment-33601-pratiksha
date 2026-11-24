@@ -1,60 +1,79 @@
+
 import java.util.Scanner;
 
-public static void main(String[] args){
+public class Calculator {
 
-  Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
 
-  System.out.println("===== Java Calculator =====");
+        try (Scanner scanner = new Scanner(System.in)) {
 
-  System.out.print("Enter first number: ");
-  double num1 = scanner.nextDouble();
+            System.out.println("===== Java Calculator =====");
 
-  System.out.print("Enter operator (+, -, *, /, %): ");
-  char operator = scanner.next().charAt(0);
+            System.out.print("Enter first number: ");
+            double num1 = readNumber(scanner);
 
-  System.out.print("Enter second number: ");
-  double num2 = scanner.nextDouble();
+            System.out.print("Enter operator (+, -, *, /, %): ");
+            String operator = scanner.nextLine().trim();
 
-  double result;
+            if (!operator.matches("[+\\-*/%]")) {
+                System.out.println("Invalid operator! Please use +, -, *, / or %.");
+                return;
+            }
 
-  switch (operator) {
-    case '+':
-      result = num1 + num2;
-      break;
-    
-    case '-':
-      result = num1 - num2;
-      break;  
+            System.out.print("Enter second number: ");
+            double num2 = readNumber(scanner);
 
-    case '*':
-      result = num1 * num2;
-      break;
-      
-    case '/':
-      if (num2 == 0) {
-        System.out.println("Error: Cannot divide by zero.");
-        scanner.close();
-        return;
-      }
-      result = num1 / num2;
-      break; 
-      
-    case '%':
-    if (num2 == 0) {
-        System.out.println("Error: Cannot calculate modulus by zero.");
-        scanner.close();
-        return;
+            double result;
+
+            switch (operator) {
+
+                case "+":
+                    result = num1 + num2;
+                    break;
+
+                case "-":
+                    result = num1 - num2;
+                    break;
+
+                case "*":
+                    result = num1 * num2;
+                    break;
+
+                case "/":
+                    if (num2 == 0) {
+                        System.out.println("Error: Division by zero is not allowed.");
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+
+                case "%":
+                    if (num2 == 0) {
+                        System.out.println("Error: Modulus by zero is not allowed.");
+                        return;
+                    }
+                    result = num1 % num2;
+                    break;
+
+                default:
+                    System.out.println("Invalid operator.");
+                    return;
+            }
+
+            System.out.println("Result: " + result);
+        }
     }
-    result = num1 % num2;
-    break;  
-  
-    default:
-      System.out.println("Invalid operator!");
-      scanner.close();
-      return;
-  }
 
-   System.out.println("Result: " + result);
+    private static double readNumber(Scanner scanner) {
 
-    scanner.close();
-  }
+        while (true) {
+            String input = scanner.nextLine().trim();
+
+            try {
+                return Double.parseDouble(input);
+            } catch (NumberFormatException e) {
+                System.out.print("Invalid number! Please enter a numeric value: ");
+            }
+        }
+    }
+}
