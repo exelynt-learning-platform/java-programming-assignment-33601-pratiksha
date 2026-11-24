@@ -62,3 +62,11 @@ Result: 30.0
 ## Git History
 
 Paste the output of git log --oneline --graph here.
+
+## Sample Program Run
+
+===== Java Calculator =====
+Enter first number: 10
+Enter operator (+, -, *, /): +
+Enter second number: 20
+Result: 30.0
