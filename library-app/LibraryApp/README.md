@@ -29,3 +29,6 @@ Library System Ready
 
 ## IDE
 Developed using IntelliJ IDEA.
+
+## Screenshots
+Screenshots are available in the screenshots/ directory.

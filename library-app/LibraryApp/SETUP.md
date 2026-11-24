@@ -1,22 +1,71 @@
 
 # Java Development Environment Setup
 
-## 1. Project Information
-Project Name: Library App
+# Java Library Management System - Setup
 
-## 2. JDK Installation
-Java Development Kit (JDK) is installed successfully.
+## 1. JDK Installation
 
+Installed JDK: JDK 25
 
-## 3. Java Runtime Version
+## 2. Environment Variable Configuration
+
+Configured the following Windows environment variables:
+
+**JAVA_HOME**
+
+```text
+C:\Program Files\Java\jdk-25
+```
+
+**PATH**
+
+```text
+%JAVA_HOME%\bin
+```
+
+## 3. Java Version Verification
+
+Command:
+
+```powershell
+java -version
+```
+
+Actual output:
 
 java version "27.0.1.1" 2026-11-17
 Java(TM) SE Runtime Environment (build 27.0.1.1+4-22)
 Java HotSpot(TM) 64-Bit Server VM (build 27.0.1.1+4-22, mixed mode, sharing)
 
-## 4. Java Compiler Version
+Command:
+
+```powershell
+javac -version
+```
+
+Actual output:
 
 javac 27.0.1.1
+
+## 4. Compile and Run
+
+Compile:
+
+```powershell
+javac -d out src/LibraryApp.java
+```
+
+Run:
+
+```powershell
+java -cp out LibraryApp
+```
+
+Program output:
+
+```text
+Library System Ready
+```
 
 ## 5. IDE
 IntelliJ IDEA
