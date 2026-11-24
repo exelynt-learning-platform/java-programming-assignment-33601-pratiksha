@@ -3,14 +3,13 @@ public class TempConverter {
 
     public static void main(String[] args) {
 
-        double celsius = 25.0;
+        final double CELSIUS = 25.0; // Stores the Celsius temperature as a named constant.
 
-        // Convert Celsius to Fahrenheit using the formula.
-        double fahrenheit = (celsius * 9 / 5) + 32;
+        double fahrenheit = (CELSIUS * 9 / 5) + 32; // Converts Celsius into Fahrenheit.
 
-        System.out.println("Temperature Converter");
-        System.out.println("---------------------");
-        System.out.println("Celsius: " + celsius);
-        System.out.println("Fahrenheit: " + fahrenheit);
+        System.out.println("Temperature Converter"); // Displays the application title.
+        System.out.println("---------------------"); // Displays a separator.
+        System.out.println("Celsius: " + CELSIUS); // Displays Celsius temperature.
+        System.out.println("Fahrenheit: " + fahrenheit); // Displays converted Fahrenheit temperature.
     }
 }

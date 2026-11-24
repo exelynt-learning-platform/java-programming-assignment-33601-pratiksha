@@ -1,12 +1,14 @@
-# Temperature Converter - Run Log
+# Temperature Converter - Execution Run Log
 
 ## 1. Project Overview
 
-Created a Java program named `TempConverter.java` to convert Celsius temperature into Fahrenheit.
+Created `TempConverter.java` to convert Celsius temperature into Fahrenheit.
 
 Formula:
 
 `Fahrenheit = (Celsius * 9 / 5) + 32`
+
+The Celsius temperature is stored in a named constant.
 
 ## 2. Successful Compilation
 
@@ -16,14 +18,6 @@ Formula:
 javac TempConverter.java
 ```
 
-**Output:**
-
-```text
-Compilation successful. No errors.
-```
-
-**Explanation:** The Java compiler successfully compiled the source file and generated `TempConverter.class`.
-
 ## 3. Successful Execution
 
 **Command:**
@@ -32,7 +26,7 @@ Compilation successful. No errors.
 java TempConverter
 ```
 
-**Output:**
+**Actual output:**
 
 ```text
 Temperature Converter
@@ -41,11 +35,13 @@ Celsius: 25.0
 Fahrenheit: 77.0
 ```
 
-**Explanation:** The program successfully converted 25°C into 77°F.
+**Explanation:** The application successfully converted 25 degrees Celsius into 77 degrees Fahrenheit.
+
+**Screenshot:** `screenshots/Screenshot 2026-11-25 001308.png`
 
 ## 4. Compile-Time Error
 
-**Change introduced:** Removed the semicolon after the Celsius variable declaration.
+**Change introduced:** Removed the semicolon from the Celsius constant declaration.
 
 **Command:**
 
@@ -53,18 +49,20 @@ Fahrenheit: 77.0
 javac TempConverter.java
 ```
 
-**Actual error output:**
+**Actual compiler output:**
 
 TempConverter.java:6: error: ';' expected
 double celsius = 25.0
 ^
 1 error
 
-**Explanation:** The missing semicolon caused a syntax error. The Java compiler detected the issue and stopped compilation.
+**Explanation:** The missing semicolon caused a syntax error. The Java compiler detected the error and prevented compilation.
+
+**Screenshot:** `screenshots/Screenshot 2026-11-25 001341.png`
 
 ## 5. Runtime Error
 
-**Change introduced:** Added integer division by a variable containing zero.
+**Change introduced:** Added integer division by zero.
 
 ```java
 int denominator = 0;
@@ -76,28 +74,31 @@ int result = 10 / denominator;
 ```powershell
 javac TempConverter.java
 ```
-
-**Output:** Compilation successful.
-
 **Execution command:**
 
 ```powershell
 java TempConverter
 ```
 
-**Actual error output:**
+**Actual runtime error:**
 
 Exception in thread "main" java.lang.ArithmeticException: / by zero
 at TempConverter.main(TempConverter.java:12)
 
-**Explanation:** The program compiled successfully, but execution failed because integer division by zero is not allowed in Java.
+**Explanation:** The program compiled successfully, but execution resulted in an ArithmeticException because integer division by zero is not allowed.
 
-## 6. Conclusion
+**Screenshot:** `screenshots/Screenshot 2026-11-25 001433.png`
+
+## 6. Final Verification
+
+After removing the temporary errors, the original program was compiled and executed successfully again.
+
+## 7. Conclusion
 
 Successfully learned:
 
-1. How to write a Java temperature conversion program.
-2. How to compile Java programs using `javac`.
-3. How to execute Java programs using `java`.
-4. How to identify compile-time errors.
-5. How to identify runtime errors.
+1. Writing and compiling Java programs using `javac`.
+2. Executing Java programs using `java`.
+3. Identifying compile-time errors.
+4. Identifying runtime errors.
+5. Capturing terminal evidence and documenting program execution.
