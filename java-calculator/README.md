@@ -10,7 +10,7 @@ It supports basic arithmetic operations.
 - Subtraction (-)
 - Multiplication (*)
 - Division (/)
-- Error handling for division by zero
+- Input validation
 
 ## Technologies
 - Java
