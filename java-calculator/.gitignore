@@ -3,13 +3,12 @@
 *.class
 
 # Build output directories
-out/
 target/
+out/
 
-# IDE settings
+# IDE configuration files
 .idea/
 .vscode/
 
-# Operating system files
-.DS_Store
-Thumbs.db
+# Log files
+*.log
