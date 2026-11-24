@@ -70,3 +70,11 @@ Enter first number: 10
 Enter operator (+, -, *, /): +
 Enter second number: 20
 Result: 30.0
+
+## Git Best Practices
+
+1. Use meaningful commit messages.
+2. Create feature branches for new functionality.
+3. Never commit compiled Java files.
+4. Review changes before committing.
+5. Use pull requests for code reviews.
