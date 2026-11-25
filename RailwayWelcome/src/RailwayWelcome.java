@@ -1,19 +1,19 @@
 
-// Declares the RailwayWelcome class.
+// This class displays a railway station welcome message.
 public class RailwayWelcome {
 
-    // Defines the main method, which is the entry point of the program.
+    // The main method is the starting point of the Java program.
     public static void main(String[] args) {
 
-        // Prints Hello World to the console.
+        // Print Hello World on the console.
         System.out.println("Hello World");
 
-        // Prints a welcome message for railway passengers.
+        // Display a railway welcome message.
         System.out.println("Welcome to Indian Railways!");
 
-        // Prints an additional station announcement.
-        System.out.println("We wish you a safe and happy journey.");
+        // Display a passenger safety message.
+        System.out.println("Have a safe and happy journey!");
 
-    } // Ends the main method.
+    } // End of main method.
 
-} // Ends the RailwayWelcome class.
+} // End of RailwayWelcome class.

@@ -1,94 +1,64 @@
-# Railway Welcome - Java Program
+# RailwayWelcome - Java Program
 
-## 1. Overview
+## Overview
+This is a beginner-level Java program that prints Hello World and a welcome message for Indian Railway passengers.
 
-This project demonstrates a basic Java application using the Java Development Kit (JDK).
-
-The program is named `RailwayWelcome.java` and demonstrates:
-- Java class declaration.
-- Main method.
-- System.out.println() statements.
-- Printing Hello World.
-- Displaying a railway station welcome message.
-
-## 2. Technologies Used
-
+## Technologies Used
 - Java JDK 25
 - IntelliJ IDEA
 - Git
 - GitHub
 
-## 3. Project Structure
+## Project Structure
 
 ```text
 RailwayWelcome/
-│
 ├── src/
 │   └── RailwayWelcome.java
-│
 ├── out/
-│
 └── README.md
 ```
 
-## 4. Java Version
+## Java Version
 
-The project uses JDK 25.
-
-### Java Version Command
+Run the following commands to verify the Java installation.
 
 ```bash
 java -version
-```
-output:
 
 openjdk version "25.0.5" 2026-10-20 LTS
 OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
 OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode, sharing)
 
-### Compiler Version Command
-
-```bash
 javac -version
-```
 
-## 5. How to Compile and Run
+javac 25.0.5
 
-Open the terminal in the project directory.
 
-### Compile
+
+## How to Compile
 
 ```bash
 javac -d out src/RailwayWelcome.java
 ```
 
-### Run
+## How to Run
 
 ```bash
 java -cp out RailwayWelcome
 ```
-output:
-Hello World
-Welcome to Indian Railways!
-We wish you a safe and happy journey.
 
-## 6. Sample Program Run
+## Sample Program Output
 
 ```text
 Hello World
 Welcome to Indian Railways!
-We wish you a safe and happy journey.
+Have a safe and happy journey!
 ```
 
-## 7. Learning Outcomes
-
-- Understood Java class structure.
-- Learned how the main method works.
-- Practiced Java print statements.
-- Configured JAVA_HOME and PATH.
-- Compiled and executed a Java program.
-- Practiced Git and GitHub collaboration.
-
-## 8. Author
-
-Java Programming Assignment
+## Learning Outcomes
+- Understanding Java classes.
+- Understanding the main method.
+- Using System.out.println().
+- Compiling and executing Java programs.
+- Understanding Git and GitHub basics.
