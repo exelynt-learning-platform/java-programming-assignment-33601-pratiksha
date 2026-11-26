@@ -83,6 +83,5 @@ public class PayslipMethods {
 
         // Close Scanner
         scanner.close();
-    
     }
 }
